@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Admunt
+<input type="number" id="aa">
+from
+<select id="fom">
+    <option value="32">baht Thailan</option>
+    <option value="8671">kip lao</option>
+    <option value="6,7">krone danmach</option>
+    <option value="4039">riel campuchia</option>
+    <option value="1">rupi an do</option>
+    <option value="1160">won han quoc</option>
+    <option value="19">peso mexico</option>
+    <option value="2300">VND</option>
+    <option value="1">USD</option>
+    <option value="0.85">EURO</option>
+
+</select>
+to
+<select id="to">
+    <option value="32">baht Thailan</option>
+    <option value="8671">kip lao</option>
+    <option value="6,7">krone danmach</option>
+    <option value="4039">riel campuchia</option>
+    <option value="1">rupi an do</option>
+    <option value="1160">won han quoc</option>
+    <option value="19">peso mexico</option>
+    <option value="2300">VND</option>
+    <option value="1">USD</option>
+    <option value="0.85">EURO</option>
+</select>
+<button type="button" onclick="doitien()">OK</button>
+<script>
+    function doitien(){
+        let a = parseFloat(document.getElementById("aa").value)
+        let b = parseFloat(document.getElementById("fom").value)
+        let c = parseFloat(document.getElementById("to").value)
+        kq = (a * c) / b
+        document.getElementById("gg").innerHTML = kq
+    }
+</script>
+<br/>
+<br/>
+<font>Result</font>
+<font><p id="gg"></p></font>
+</body>
+</html>
