@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Amount
+<input type="number" id="st">
+From currency
+<select id="from">
+    <option value="VND">VND</option>
+    <option value="USD">USD</option>
+</select>
+To currency
+<select id="to">
+    <option value="USD">USD</option>
+    <option value="VND">VND</option>
+</select>
+<button type="button" onclick="doitien()">click</button>
+<script>
+    function doitien() {
+        let from = document.getElementById("from").value;
+        let to = document.getElementById("to").value;
+        let st = document.getElementById("st").value;
+        let x=parseFloat(st);
+        if (from === "USD" && to === "VND")
+            kq=x*23000;
+        if (from === "VND" && to === "USD")
+            kq=x/23000;
+        if (from === "VND" && to === "VND")
+            kq=x;
+        if (from === "USD" && to === "USD")
+            kq=x;
+        document.getElementById("rs").innerHTML=kq
+    }
+</script>
+<br><br>
+<font>Result</font>
+<font><p id="rs"></p></font>
+
+</body>
+</html>
